@@ -62,7 +62,7 @@
         <div class="about-grid">
           <div class="about-copy">
             <p class="lead">I build search engines, compilers, and interactive graphics — with the interesting parts exposed.</p>
-            <p>All core implementations are fully open source on GitHub with architecture documentation, test suites, and interactive browser sandboxes.</p>
+            <p>The featured repositories include source code, tests, and implementation notes.</p>
             <p class="status">Status → <strong>available</strong> for interesting systems work.</p>
           </div>
           <div class="about-card">
@@ -73,14 +73,14 @@
       </section>
       <section id="work" class="section work">
         <h2 class="section-label">Selected Work</h2>
-        <p class="section-sub">Production-grade experiments with the interesting parts exposed.</p>
+        <p class="section-sub">Browser experiments with source code and implementation notes.</p>
         <article class="project">
           <div class="project-meta"><span class="num">01</span><span class="cat">SEARCH ENGINE</span></div>
           <h3>Sift</h3>
           <p class="tagline">Search, explained.</p>
-          <p>A from-scratch, typo-tolerant, search-as-you-type engine running in a Web Worker over 10k records, with faceting, highlighting, a live latency readout and a per-hit ranking explainer.</p>
+          <p>A typo-tolerant, search-as-you-type engine running in a Web Worker over 10,000 generated records, with faceting, highlighting, a live latency readout and a per-hit ranking explainer.</p>
           <ul><li>Compressed radix trie — prefix search + bounded typo matching</li><li>Positional inverted index + bitset facets via Uint32Array popcounts</li><li>Six ranking criteria → top-K heap with full tie-break explanation</li></ul>
-          <div class="tags"><span>TypeScript</span><span>Web Workers</span><span>107 tests</span><a href="https://github.com/justalivefornothing/sift-search" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;"><span>Source Code ↗</span></a></div>
+          <div class="tags"><span>TypeScript</span><span>Web Workers</span><span>Local queries</span><a href="https://github.com/justalivefornothing/sift-search" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;"><span>Source Code ↗</span></a></div>
         </article>
         <article class="project">
           <div class="project-meta"><span class="num">02</span><span class="cat">LANGUAGE + COMPILER</span></div>
@@ -88,7 +88,7 @@
           <p class="tagline">Source to WebAssembly.</p>
           <p>A small language that compiles to WebAssembly in your browser, with a live editor and inspectable compiler stages.</p>
           <ul><li>Pipeline: source → lexer → parser → type checker → binary emitter → WASM → worker runtime</li><li>Variable-length LEB128 integer encoding + custom binary section generation</li><li>Mandelbrot demo writes 65,536 pixels through a canvas host</li></ul>
-          <div class="tags"><span>Compiler design</span><span>WebAssembly</span><span>53 tests</span><a href="https://github.com/justalivefornothing/kiln-lang" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;"><span>Source Code ↗</span></a></div>
+          <div class="tags"><span>Compiler design</span><span>WebAssembly</span><span>Worker runtime</span><a href="https://github.com/justalivefornothing/kiln-lang" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;"><span>Source Code ↗</span></a></div>
         </article>
         <article class="project">
           <div class="project-meta"><span class="num">03</span><span class="cat">INTERACTIVE GRAPHICS</span></div>
@@ -96,14 +96,14 @@
           <p class="tagline">Paint the flow.</p>
           <p>Interactive WebGL2 fluid playground with mouse-and-touch painting, tunable presets, and shareable looks.</p>
           <ul><li>Semi-Lagrangian advection, vorticity confinement, pressure solve</li><li>Ping-pong framebuffers, separate sim/dye resolutions, packed float textures</li></ul>
-          <div class="tags"><span>WebGL2</span><span>GLSL</span><span>97 tests</span><a href="https://github.com/justalivefornothing/eddy-fluid" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;"><span>Source Code ↗</span></a></div>
+          <div class="tags"><span>WebGL2</span><span>GLSL</span><span>Fluid simulation</span><a href="https://github.com/justalivefornothing/eddy-fluid" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;"><span>Source Code ↗</span></a></div>
         </article>
         <div class="more-projects">
           <h3>Selected Systems & Sandboxes</h3>
           <div class="more-grid">
-            <a href="https://github.com/justalivefornothing/chorus-editor" target="_blank" rel="noopener"><strong>Chorus</strong><span>Collaborative code editor powered by an RGA sequence CRDT</span></a>
+            <a href="https://github.com/justalivefornothing/chorus-editor" target="_blank" rel="noopener"><strong>Chorus</strong><span>RGA text editor with same-browser tab sync and a simulated network lab</span></a>
             <a href="https://github.com/justalivefornothing/impulse-physics" target="_blank" rel="noopener"><strong>Impulse</strong><span>2D rigid-body engine with SAT collision & impulse solver</span></a>
-            <a href="https://github.com/justalivefornothing/threadbare-regex" target="_blank" rel="noopener"><strong>Threadbare</strong><span>From-scratch regex engine (Thompson NFA → simulation)</span></a>
+            <a href="https://github.com/justalivefornothing/threadbare-regex" target="_blank" rel="noopener"><strong>Threadbare</strong><span>Regex engine (Thompson NFA → simulation)</span></a>
             <a href="https://github.com/justalivefornothing/sprig-lisp" target="_blank" rel="noopener"><strong>Sprig Lisp</strong><span>Scheme-flavored Lisp with lexical closures & REPL visualizer</span></a>
             <a href="https://github.com/justalivefornothing/turing-soup-rd" target="_blank" rel="noopener"><strong>Turing Soup</strong><span>GPU Gray-Scott reaction-diffusion simulation</span></a>
             <a href="https://github.com/justalivefornothing/If-I-Was-Philosophy-Book" target="_blank" rel="noopener"><strong>If I Was</strong><span>Philosophy manuscript: On Identity, Illusion, and Autonomy</span></a>
@@ -112,7 +112,7 @@
       </section>
       <section id="skills" class="section skills">
         <h2 class="section-label">Skills & Expertise</h2>
-        <p class="section-sub">A comprehensive overview of technologies and systems I build</p>
+        <p class="section-sub">Languages, algorithms, and browser tools</p>
         <div class="skills-grid">
           <div class="skill-group"><h3>Languages</h3><div class="skill-chips"><span>TypeScript</span><span>WebAssembly</span><span>GLSL</span><span>Python</span><span>Go</span></div></div>
           <div class="skill-group"><h3>Search & Indexing</h3><div class="skill-chips"><span>Radix tries</span><span>Inverted indexes</span><span>Bitsets</span><span>Ranking heaps</span></div></div>
