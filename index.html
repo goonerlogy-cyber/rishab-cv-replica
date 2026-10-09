@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
   <title>JAFN — Search Engines · Compilers · Interactive Graphics</title>
-  <meta name="description" content="JAFN (goonerlogy-cyber) — builds search engines, compilers, and interactive graphics with the interesting parts exposed." />
+  <meta name="description" content="JAFN (justalivefornothing) — builds search engines, compilers, and interactive graphics with the interesting parts exposed." />
   <meta name="theme-color" content="#030305" />
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -35,9 +35,9 @@
         <a href="#about">About</a>
         <a href="#work">Work</a>
         <a href="#skills">Expertise</a>
-        <a href="#oss">Open Source</a>
+        <a href="#systems">Systems</a>
         <a href="#contact">Contact</a>
-        <a class="nav-ext" href="https://github.com/goonerlogy-cyber" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="nav-ext" href="https://github.com/justalivefornothing" target="_blank" rel="noopener">GitHub ↗</a>
       </nav>
     </header>
     <main>
@@ -54,7 +54,7 @@
         <div class="hero-cta">
           <a class="btn btn-primary" href="#work">View My Work</a>
           <a class="btn btn-ghost" href="#contact">Get In Touch</a>
-          <a class="btn btn-ghost" href="https://github.com/goonerlogy-cyber" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-ghost" href="https://github.com/justalivefornothing" target="_blank" rel="noopener">GitHub</a>
         </div>
       </section>
       <section id="about" class="section about">
@@ -62,12 +62,12 @@
         <div class="about-grid">
           <div class="about-copy">
             <p class="lead">I build search engines, compilers, and interactive graphics — with the interesting parts exposed.</p>
-            <p>Most of the core experiments are private source with public project notes and verification. Open-source contributions live on forks with documented PRs.</p>
+            <p>All core implementations are fully open source on GitHub with architecture documentation, test suites, and interactive browser sandboxes.</p>
             <p class="status">Status → <strong>available</strong> for interesting systems work.</p>
           </div>
           <div class="about-card">
             <img src="https://avatars.githubusercontent.com/u/240325301?v=4" alt="JAFN" width="96" height="96" />
-            <div><strong>@goonerlogy-cyber</strong><span>GitHub · 62+ repositories</span></div>
+            <div><strong>@justalivefornothing</strong><span>GitHub · Open Source Systems</span></div>
           </div>
         </div>
       </section>
@@ -79,57 +79,58 @@
           <h3>Sift</h3>
           <p class="tagline">Search, explained.</p>
           <p>A from-scratch, typo-tolerant, search-as-you-type engine running in a Web Worker over 10k records, with faceting, highlighting, a live latency readout and a per-hit ranking explainer.</p>
-          <ul><li>Compressed radix trie — prefix search + bounded typo matching</li><li>Positional inverted index + bitset facets</li><li>Six ranking criteria → top-K heap with full tie-break explanation</li></ul>
-          <div class="tags"><span>TypeScript</span><span>Web Workers</span><span>107 tests</span><span>Private source</span></div>
+          <ul><li>Compressed radix trie — prefix search + bounded typo matching</li><li>Positional inverted index + bitset facets via Uint32Array popcounts</li><li>Six ranking criteria → top-K heap with full tie-break explanation</li></ul>
+          <div class="tags"><span>TypeScript</span><span>Web Workers</span><span>107 tests</span><a href="https://github.com/justalivefornothing/sift-search" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;"><span>Source Code ↗</span></a></div>
         </article>
         <article class="project">
           <div class="project-meta"><span class="num">02</span><span class="cat">LANGUAGE + COMPILER</span></div>
           <h3>Kiln</h3>
           <p class="tagline">Source to WebAssembly.</p>
           <p>A small language that compiles to WebAssembly in your browser, with a live editor and inspectable compiler stages.</p>
-          <ul><li>Pipeline: source → lexer → parser → type checker → binary emitter → WASM → worker runtime</li><li>Mandelbrot demo writes 65,536 pixels through a canvas host</li></ul>
-          <div class="tags"><span>Compiler design</span><span>WebAssembly</span><span>53 tests</span><span>Private source</span></div>
+          <ul><li>Pipeline: source → lexer → parser → type checker → binary emitter → WASM → worker runtime</li><li>Variable-length LEB128 integer encoding + custom binary section generation</li><li>Mandelbrot demo writes 65,536 pixels through a canvas host</li></ul>
+          <div class="tags"><span>Compiler design</span><span>WebAssembly</span><span>53 tests</span><a href="https://github.com/justalivefornothing/kiln-lang" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;"><span>Source Code ↗</span></a></div>
         </article>
         <article class="project">
           <div class="project-meta"><span class="num">03</span><span class="cat">INTERACTIVE GRAPHICS</span></div>
           <h3>Eddy</h3>
           <p class="tagline">Paint the flow.</p>
           <p>Interactive WebGL2 fluid playground with mouse-and-touch painting, tunable presets, and shareable looks.</p>
-          <ul><li>Semi-Lagrangian advection, vorticity confinement, pressure solve</li><li>Ping-pong framebuffers, separate sim/dye resolutions</li></ul>
-          <div class="tags"><span>WebGL2</span><span>GLSL</span><span>97 tests</span><span>Private source</span></div>
+          <ul><li>Semi-Lagrangian advection, vorticity confinement, pressure solve</li><li>Ping-pong framebuffers, separate sim/dye resolutions, packed float textures</li></ul>
+          <div class="tags"><span>WebGL2</span><span>GLSL</span><span>97 tests</span><a href="https://github.com/justalivefornothing/eddy-fluid" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;"><span>Source Code ↗</span></a></div>
         </article>
         <div class="more-projects">
-          <h3>Also public</h3>
+          <h3>Selected Systems & Sandboxes</h3>
           <div class="more-grid">
-            <a href="https://github.com/goonerlogy-cyber/q" target="_blank" rel="noopener"><strong>q</strong><span>AI/ML paper reproductions — GANs, Transformers, ResNet, VAEs</span></a>
-            <a href="https://github.com/goonerlogy-cyber/SimplePrintHelper" target="_blank" rel="noopener"><strong>SimplePrintHelper</strong><span>Android print helper — Kotlin</span></a>
-            <a href="https://github.com/goonerlogy-cyber/area" target="_blank" rel="noopener"><strong>area</strong><span>Geometry area calculator</span></a>
-            <a href="https://github.com/goonerlogy-cyber/abd" target="_blank" rel="noopener"><strong>abd</strong><span>Letter sequence browser game</span></a>
+            <a href="https://github.com/justalivefornothing/chorus-editor" target="_blank" rel="noopener"><strong>Chorus</strong><span>Collaborative code editor powered by an RGA sequence CRDT</span></a>
+            <a href="https://github.com/justalivefornothing/impulse-physics" target="_blank" rel="noopener"><strong>Impulse</strong><span>2D rigid-body engine with SAT collision & impulse solver</span></a>
+            <a href="https://github.com/justalivefornothing/threadbare-regex" target="_blank" rel="noopener"><strong>Threadbare</strong><span>From-scratch regex engine (Thompson NFA → simulation)</span></a>
+            <a href="https://github.com/justalivefornothing/sprig-lisp" target="_blank" rel="noopener"><strong>Sprig Lisp</strong><span>Scheme-flavored Lisp with lexical closures & REPL visualizer</span></a>
+            <a href="https://github.com/justalivefornothing/turing-soup-rd" target="_blank" rel="noopener"><strong>Turing Soup</strong><span>GPU Gray-Scott reaction-diffusion simulation</span></a>
+            <a href="https://github.com/justalivefornothing/If-I-Was-Philosophy-Book" target="_blank" rel="noopener"><strong>If I Was</strong><span>Philosophy manuscript: On Identity, Illusion, and Autonomy</span></a>
           </div>
         </div>
       </section>
       <section id="skills" class="section skills">
         <h2 class="section-label">Skills & Expertise</h2>
-        <p class="section-sub">A comprehensive overview of technologies and tools I work with</p>
+        <p class="section-sub">A comprehensive overview of technologies and systems I build</p>
         <div class="skills-grid">
-          <div class="skill-group"><h3>Languages</h3><div class="skill-chips"><span>TypeScript</span><span>JavaScript</span><span>Kotlin</span><span>GLSL</span><span>WebAssembly</span><span>Python</span></div></div>
-          <div class="skill-group"><h3>Search & Indexing</h3><div class="skill-chips"><span>Radix tries</span><span>Inverted indexes</span><span>Ranking heaps</span><span>Faceting</span></div></div>
-          <div class="skill-group"><h3>Compilers</h3><div class="skill-chips"><span>Lexer</span><span>Parser</span><span>Type checker</span><span>WASM emission</span></div></div>
-          <div class="skill-group"><h3>Graphics</h3><div class="skill-chips"><span>WebGL2</span><span>GLSL</span><span>Fluid simulation</span><span>Canvas</span></div></div>
-          <div class="skill-group"><h3>Runtime</h3><div class="skill-chips"><span>Web Workers</span><span>Isolated execution</span><span>Git</span><span>Linux</span></div></div>
-          <div class="skill-group"><h3>Practice</h3><div class="skill-chips"><span>High test counts</span><span>CI</span><span>Inspectable systems</span></div></div>
+          <div class="skill-group"><h3>Languages</h3><div class="skill-chips"><span>TypeScript</span><span>WebAssembly</span><span>GLSL</span><span>Python</span><span>Go</span></div></div>
+          <div class="skill-group"><h3>Search & Indexing</h3><div class="skill-chips"><span>Radix tries</span><span>Inverted indexes</span><span>Bitsets</span><span>Ranking heaps</span></div></div>
+          <div class="skill-group"><h3>Compilers</h3><div class="skill-chips"><span>Lexer</span><span>Parser</span><span>Type checker</span><span>LEB128</span><span>WASM emission</span></div></div>
+          <div class="skill-group"><h3>Graphics & Sim</h3><div class="skill-chips"><span>WebGL2</span><span>GLSL</span><span>Fluid dynamics</span><span>2D Physics</span></div></div>
+          <div class="skill-group"><h3>Distributed Systems</h3><div class="skill-chips"><span>CRDTs (RGA)</span><span>Vector clocks</span><span>Causal delivery</span><span>Property tests</span></div></div>
+          <div class="skill-group"><h3>Runtime & Tooling</h3><div class="skill-chips"><span>Web Workers</span><span>Sandboxing</span><span>Fast-check</span><span>CI</span></div></div>
         </div>
-        <p class="skills-note">Continuously learning and evolving.</p>
       </section>
-      <section id="oss" class="section oss">
-        <h2 class="section-label">Open-source contributions</h2>
+      <section id="systems" class="section oss">
+        <h2 class="section-label">Core Architecture & Systems</h2>
         <ul class="oss-list">
-          <li><strong>IPv6 discovery</strong> — portgraph <a href="https://github.com/goonerlogy-cyber/portgraph/pull/1" target="_blank" rel="noopener">PR #1</a></li>
-          <li><strong>Terminal replay</strong> — replay <a href="https://github.com/goonerlogy-cyber/replay/pull/1" target="_blank" rel="noopener">PR #1</a></li>
-          <li><strong>JSON reports</strong> — gitpulse <a href="https://github.com/goonerlogy-cyber/gitpulse/pull/1" target="_blank" rel="noopener">PR #1</a></li>
-          <li><strong>Job completion</strong> — toil <a href="https://github.com/goonerlogy-cyber/toil/pull/1" target="_blank" rel="noopener">PR #1</a></li>
-          <li><strong>One-time sharing</strong> — cipherdrop <a href="https://github.com/goonerlogy-cyber/cipherdrop/pull/1" target="_blank" rel="noopener">PR #1</a></li>
-          <li><strong>Exact secret input</strong> — zkaudit <a href="https://github.com/goonerlogy-cyber/zkaudit/pull/1" target="_blank" rel="noopener">PR #1</a></li>
+          <li><strong>WebAssembly Binary Emission</strong> — <a href="https://github.com/justalivefornothing/kiln-lang" target="_blank" rel="noopener">kiln-lang</a>: Direct byte emission with LEB128 variable-length integer encoding and zero-dependency compilation.</li>
+          <li><strong>Radix Trie & Bitsets</strong> — <a href="https://github.com/justalivefornothing/sift-search" target="_blank" rel="noopener">sift-search</a>: Word-parallel bitset facets and bounded Levenshtein pruning in dedicated Web Workers.</li>
+          <li><strong>RGA Sequence CRDT</strong> — <a href="https://github.com/justalivefornothing/chorus-editor" target="_blank" rel="noopener">chorus-editor</a>: Causal FIFO buffering and property-based convergence testing with fast-check.</li>
+          <li><strong>SAT Rigid-Body Physics</strong> — <a href="https://github.com/justalivefornothing/impulse-physics" target="_blank" rel="noopener">impulse-physics</a>: Separating Axis Theorem collision detection and sequential-impulse constraint solving.</li>
+          <li><strong>Thompson NFA Simulation</strong> — <a href="https://github.com/justalivefornothing/threadbare-regex" target="_blank" rel="noopener">threadbare-regex</a>: Regular expression parser compiling to an NFA with animated active state sets.</li>
+          <li><strong>Navier-Stokes WebGL2</strong> — <a href="https://github.com/justalivefornothing/eddy-fluid" target="_blank" rel="noopener">eddy-fluid</a>: Semi-Lagrangian advection and Jacobi pressure solving across ping-pong FBOs.</li>
         </ul>
       </section>
       <section id="contact" class="section contact">
@@ -137,17 +138,17 @@
         <div class="contact-grid">
           <div>
             <p class="lead">Get in touch.</p>
-            <p>Handle <strong>@goonerlogy-cyber</strong> on GitHub.</p>
+            <p>Handle <strong>@justalivefornothing</strong> on GitHub.</p>
             <div class="contact-links">
-              <a href="https://github.com/goonerlogy-cyber" target="_blank" rel="noopener">GitHub</a>
-              <a href="https://github.com/goonerlogy-cyber?tab=repositories" target="_blank" rel="noopener">Repositories</a>
+              <a href="https://github.com/justalivefornothing" target="_blank" rel="noopener">GitHub Profile</a>
+              <a href="https://github.com/justalivefornothing?tab=repositories" target="_blank" rel="noopener">Repositories</a>
             </div>
           </div>
           <div class="facts">
-            <h3>Personal facts</h3>
+            <h3>Engineering Focus</h3>
             <ul>
-              <li>Handle: <strong>@goonerlogy-cyber</strong></li>
-              <li>Focus: Search · Compilers · Graphics</li>
+              <li>Handle: <strong>@justalivefornothing</strong></li>
+              <li>Domains: Search · Compilers · Graphics · Distributed Systems</li>
               <li>Status: Available for systems work</li>
             </ul>
           </div>
@@ -156,8 +157,8 @@
     </main>
     <footer class="foot">
       <span>JAFN</span>
-      <span>Search · Compilers · Graphics</span>
-      <a href="https://github.com/goonerlogy-cyber" target="_blank" rel="noopener">github.com/goonerlogy-cyber</a>
+      <span>Search · Compilers · Graphics · Distributed Systems</span>
+      <a href="https://github.com/justalivefornothing" target="_blank" rel="noopener">github.com/justalivefornothing</a>
     </footer>
   </div>
   <script src="script.js"></script>
